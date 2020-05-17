@@ -23,6 +23,7 @@ jobs:
           make chrome_aws_lambda.zip
       - name: publish
         run: |
+          chmod +x publish.sh
           ./publish.sh
         env:
           TARGET_REGION: ${{ matrix.region }}
